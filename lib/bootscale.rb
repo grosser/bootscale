@@ -6,6 +6,7 @@ module Bootscale
 
   class << self
     def [](path)
+      path = path.to_s
       if path.end_with?(DOT_RB) || path.end_with?(DOT_SO)
         cache[path]
       else
